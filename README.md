@@ -9,10 +9,6 @@ files. Once you have parsed the data, you can use the hadoop command-line utilit
 REST API to store the data in HDFS, and use the hive command-line interface or a HIVE client to
 connect to the HIVE server and query and view the data.
 
-## Problem Statement:
-
-An URL that points to a zip file is provided.The zip file contains multiple JSON files. The JSON files contain multiple documents with various data structures.Goal is to download the zip file from the URL, extract the data from the zip file, process the JSON files, store it in Amazon S3, and load it into Amazon Database (NoSQL).
-
 ## Getting the Data
 
 Using Boto3 API, I've created an s3 bucket to store the zipfile. Using Requests module I got the zipfile from the url through get method in a variable. I didn't write it into my local. Using s3 put_object method I put it in the bucket directly.
